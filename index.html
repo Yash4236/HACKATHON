@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="logo">
+            <a href="#home">
+                <img width="53" src="images logo.png" alt="Logo">
+            </a>
+        </span>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="cart.html" id="cartLink">
+                  Cart (<span id="cartCount">0</span>)
+                </a>
+              </li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <!-- Home Section -->
+<!-- Home Section -->
+<section id="home">
+    <div class="video-container">
+        <!-- Background Video -->
+        <video src="video.mp4" autoplay loop muted class="bg-video"></video>
+        <!-- Overlay for better text visibility -->
+        <div class="overlay"></div>
+    </div>
+    <div class="content">
+        <div class="para">
+            <h1>Step Up Your Style, Stay Connected, and Get Tech-Savvy!</h1>
+            <h3>Discover top-quality shoes, watches, laptops, and mobile phones all in one place.</h3>
+            <!-- Shop Now Button -->
+            <a href="#shop" class="shop-now-btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h1>Shop Section</h1>
+        <!-- Product Grid with Hover Effect -->
+        <div class="product-grid">
+            <div class="product">
+                <a href="shoes.html">
+                <img src="shoes.png" alt="Shoes" class="product-image shoe-image">
+                <p>Shoes</p>
+            </a>
+            </div>
+            <div class="product">
+                <a href="watch.html">
+                <img src="watch.webp" alt="Watch" class="product-image watch-image">
+                <p>Watch</p></a>
+            </div>
+            <div class="product">
+                <a href="mobile.html">
+                <img src="mobile.webp" alt="Mobile" class="product-image mobile-image">
+                <p>Mobile</p><a href="shop.html"></a>
+            </div>
+            <div class="product">
+                <a href="laptop.html">
+                <img src="laptop.webp" alt="Laptop" class="product-image laptop-image">
+                <p>Laptop</p></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Footer) -->
+    <footer id="contact">
+        <h1>Contact Section</h1>
+        <form class="contact-form">
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </footer>
+
+    <!-- External JS File -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <script src="cart.js"></script>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+    <button onclick="redirectToPayment()">Proceed to Payment</button>
+
+    <script>
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartDiv = document.getElementById('cartItems');
+            cartDiv.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                cartDiv.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItems.forEach(item => {
+                    cartDiv.innerHTML += `<p>${item.name} - $${item.price} x ${item.quantity}</p>`;
+                });
+            }
+        }
+
+        function redirectToPayment() {
+            // Redirect to the payment page (e.g., payment.html)
+            window.location.href = 'payment.html';
+        }
+
+        // Call displayCartItems on page load
+        document.addEventListener('DOMContentLoaded', displayCartItems);
+    </script>
+</body>
+</html>
